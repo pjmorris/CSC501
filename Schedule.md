@@ -3,6 +3,8 @@
 
 ## Schedule 
 
+### NOTE:  As of 8/22/2019, Schedule is correct through the Midterm, still needs to be updated for the rest of the semester.
+
 | Tuesday | Thursday | Papers | Assignments |
 |-----|-----|-----|-----|
 | | 8/22/19	L1:Introduction  [OSTEP](http://pages.cs.wisc.edu/~remzi/OSTEP/), pages 1-20 ([1](http://pages.cs.wisc.edu/~remzi/OSTEP/preface.pdf),[2](http://pages.cs.wisc.edu/~remzi/OSTEP/dialogue-threeeasy.pdf),[3](http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf),[code](http://pages.cs.wisc.edu/~remzi/OSTEP/Code/code.intro.tgz)). |  ["On Building Systems That Will Fail", Corbato](http://larch-www.lcs.mit.edu:8001/~corbato/turing91/) | [P0](https://people.engr.ncsu.edu/gjin2/Classes/501/Fall2019/assignments/PA0/pa0.html) |
