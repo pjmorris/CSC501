@@ -3,7 +3,7 @@
 
 ## Schedule 
 
-### NOTE:  As of 8/22/2019, Schedule is correct through the Midterm, still needs to be updated for the rest of the semester.
+### NOTE:  Schedule updated 10/14/2019
 
 | Tuesday | Thursday | Papers | Assignments |
 |-----|-----|-----|-----|
