@@ -23,7 +23,7 @@
 | 11/12/19	L21:SSD [OSTEP](http://pages.cs.wisc.edu/~remzi/OSTEP/) pages 563-599 ([I](http://pages.cs.wisc.edu/~remzi/OSTEP/file-ssd.pdf), [44](http://pages.cs.wisc.edu/~remzi/OSTEP/file-integrity.pdf)) | 11/14/19	L22:Distributed Systems	[OSTEP](http://pages.cs.wisc.edu/~remzi/OSTEP/) pages 601-620 ([46](http://pages.cs.wisc.edu/~remzi/OSTEP/dialogue-distribution.pdf), [47](http://www.cs.wisc.edu/~remzi/OSTEP/dist-intro.pdf))	| | |
 | 11/19/19	L23:NFS [OSTEP](http://pages.cs.wisc.edu/~remzi/OSTEP/) pages 621-638 ([48](http://www.cs.wisc.edu/~remzi/OSTEP/dist-nfs.pdf), [Paper](nfs.pdf)) | 11/21/19	L24:AFS [OSTEP](http://pages.cs.wisc.edu/~remzi/OSTEP/) pages 639-652 ([49](http://www.cs.wisc.edu/~remzi/OSTEP/dist-afs.pdf), [Paper](afs.pdf))	| ["The Sun Network File System: Design, Implementation and Experience", Sandberg](nfs.pdf), ["Scale and Performance in a Distributed File System", Howard, et al.](afs.pdf)  | |
 | 11/26/19	L25:Virtual Machines ([VMM](http://www.cs.wisc.edu/~remzi/OSTEP/vmm-intro.pdf)) | 11/28/19	Thanksgiving	| ["Disco: Running Commodity Operating Systems on Scalable Multiprocessors" Bugnion, et al.](disco.pdf) | |
-| 12/3/19	L26:Containers |	12/5/19	L27:Kubernetes	| | |
+| 12/3/19	L26:Containers |	12/5/19	L27:Kubernetes	| | Choice of [P3A](https://people.engr.ncsu.edu/gjin2/Classes/501/Fall2019/assignments/PA3/pa3a.html), [P3B](https://people.engr.ncsu.edu/gjin2/Classes/501/Fall2019/assignments/PA3/pa3b.html), [*Optional PA4*](https://htmlpreview.github.io/?https://github.com/pjmorris/CSC501/blob/master/PA4_Optional.html) Due 12/7 |
 | 12/10/19	| 12/12/19	Final, 6-9pm	| | |
 | 12/17/19	| 12/19/19	Grades due	| | |
 
