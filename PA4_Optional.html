@@ -1,0 +1,110 @@
+
+<html><head>
+<head>
+<title>CSC 501 Spring 2019 OPTIONAL Homework 4</title>
+</head>
+
+<body>
+<div align=center>
+<div align=left style="width: 880px;">
+<h2 align="center">CSC501 Fall 2019</h2>
+<h2 align="center">PA4: Optional Assignment: Concurrency in Go</h2>
+<h2 align="center">Due: December 7 2019, 4:00 AM</h2>
+	
+The concurrency examples and exercises in the textbook use the POSIX pthreads library. 
+An alternative approach, modeled on the concurrency primitives described in Hoares' 
+'Communicating Sequential Processes' paper, is used in the Go programming language. 
+This assignment presents a series of exercises in which you will implement algorithms 
+using both pthreads and Go channels and goroutines, and compare their performance 
+and ease of use.
+
+<h4>Go Tutorial</h4>
+Work through enough of <a href="https://tour.golang.org/welcome/1">A Tour of Go</a> to feel comfortable, and refer to it as needed as you implement the programs called for in the exercises.
+
+<h4>Go Concurrency Tutorial</h4>
+Once you've toured Go enough to feel like you have the idea, 
+watch this <a href="http://www.youtube.com/watch?v=f6kdp27TYZs">video on Go Concurrency</a>, 
+There are slides available for the talk, (<a href="https://talks.golang.org/2012/concurrency.slide#1">Slides available here</a>). I suggest taking your own notes as well. 
+
+<h4>Lock-Based Concurrent Data Structures using Pthreads</h4>
+<h5>Pthreads</h5>
+Work through the first three homework questions in Chapter 29 of the textbook, carefully documenting your results. The questions are repeated below. 
+
+<ol>
+<li>1. We will start by redoing the measurements within this chapter. Use
+the call gettimeofday() to measure time within your program.
+How accurate is this timer? What is the smallest interval it can measure? Gain confidence in its workings, as we will need it in all subsequent questions. You can also look into other timers, such as the cycle counter available on x86 via the rdtsc instruction.</li>
+<li>Now, build a simple concurrent counter and measure how long it
+takes to increment the counter many times as the number of threads
+increases. How many CPUs are available on the system you are
+using? Does this number impact your measurements at all?
+</li>
+<li>Next, build a version of the sloppy counter. Once again, measure its
+performance as the number of threads varies, as well as the threshold. Do the numbers match what you see in the chapter?
+</li>
+</ol>
+
+<h5>Go</h5>
+
+Repeat the implementation and measurement for the questions above, using Go rather than C/PThreads. 
+
+
+<h4>The Producer-Consumer problem</h4>
+<h5>Pthreads</h5>
+
+Work through homework questions 1-7 in Chapter 30 of the textbook, carefully documenting your results, using the original C and pthreads (<a href="https://github.com/asnr/ostep/tree/master/concurrency/30_condition_variables">source here</a>):
+
+<ol>
+<li>Our first question focuses on main-two-cvs-while.c (the working solution). First, study the code. Do you think you have an understanding of what should happen when you run the program?</li>
+<li>Run with one producer and one consumer, and have the producer
+produce a few values. Start with a buffer (size 1), and then increase
+it. How does the behavior of the code change with larger buffers?
+(or does it?) What would you predict num full to be with different
+buffer sizes (e.g., -m 10) and different numbers of produced items
+(e.g., -l 100), when you change the consumer sleep string from
+default (no sleep) to -C 0,0,0,0,0,0,1?</li>
+<li>Run the code on different systems (e.g., a VCL, and your laptop).
+Do you see different behavior across these systems?</li>
+<li>Lets look at some timings. How long do you think the following execution, with one producer, three consumers, a single-entry
+shared buffer, and each consumer pausing at point c3 for a second, will take? ./main-two-cvs-while -p 1 -c 3 -m 1 -C
+0,0,0,1,0,0,0:0,0,0,1,0,0,0:0,0,0,1,0,0,0 -l 10 -v -t</li>
+<li>Now change the size of the shared buffer to 3 (-m 3). Will this make
+any difference in the total time?</li>
+<li>Now change the location of the sleep to c6 (this models a consumer taking something off the queue and then doing something
+with it), again using a single-entry buffer. What time do you predict in this case? ./main-two-cvs-while -p 1 -c 3 -m 1
+-C 0,0,0,0,0,0,1:0,0,0,0,0,0,1:0,0,0,0,0,0,1 -l 10</li>
+-v -t
+<li>Finally, change the buffer size to 3 again (-m 3). What time do you
+predict now?</li>
+
+</ol>
+
+<h5>Go</h5>
+
+Repeat the implementation for the Chapter 30 questions, using Go rather than C/PThreads. 
+
+
+<h4>The Sieve of Eratosthenes</h4>
+Hoare's 1978 paper, "Communicating Sequential Processes" (CSP) gives a psuedocode implementation of 
+an old algorithm for finding prime numbers, the 'Sieve of Eratosthenes' in Section 6.1. The CSP paper implementation 
+uses an 'array of processes' that pass numbers by message. 
+
+Implement the sieve as described in CSP in pthreads and in Go. In C, use threads to simulate processes, running N threads for N processes.
+In Go, use goroutines and channels. Measure and document the performance of the C and Go implementations for all 
+prime numbers up to 100, 1000, and 10000 (run each version of the code three times, changing the loop variable each time).
+
+<h4>Q & A:</h4>
+<ol>
+<li>Q: How do C and Go compare for performance on the assigned exercises>?<br>
+</li> 
+<li>Q: What is your opinion of how C and Go compare for usability. Did you find one or the other easier to read/write/reason about/debug?<br>
+</li> 
+</ol>
+
+<h4>What to turn in</h4>
+Create a PA4 directory for all project-related materials. Include all source code you write or modify. Document your results in PA4_results.txt. tar the complete PA4 directory and upload to Moodle
+<a href="http://people.engr.ncsu.edu/gjin2/Classes/501/Fall2019/">Back to the
+		CSC501 web page</a>
+</div>
+</div>
+</body></html>
